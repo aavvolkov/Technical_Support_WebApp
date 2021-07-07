@@ -1,7 +1,7 @@
 ﻿using System;
 using Common;
 
-namespace User_Authorization_Service.Models
+namespace User_Service.Models
 {
     public class User: IDomainEntity
     {
