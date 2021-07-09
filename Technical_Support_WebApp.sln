@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_Service", "Task_Service\Task_Service.csproj", "{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Servic", "User_Servic\User_Servic.csproj", "{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Service", "User_Service\User_Service.csproj", "{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

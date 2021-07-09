@@ -5,7 +5,7 @@ namespace User_Service
 {
     public class UserDbContext : DbContext
     {
-        public DbSet<User> Task { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public UserDbContext()
         {

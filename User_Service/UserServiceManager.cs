@@ -6,49 +6,35 @@ namespace User_Service
 {
     public class UserServiceManager : IUserManager
         {
-            public void Add(User u)
+            public void Add(User user)
             {
-                Console.WriteLine("add");
                 using var context = new UserDbContext();
-                var entity = context.Task.Add(u);
+                var entity = context.Users.Add(user);
                 entity.State = EntityState.Added;
+                string newId = user.Id.ToString();
                 context.SaveChanges();
+                Console.WriteLine("add Id:"+newId+" createdDate:"+DateTime.Now.ToUniversalTime());
             }
 
             public void Delete(int id)
             {
-                Console.WriteLine("delete");
+                Console.WriteLine("delete Id:"+id+" deletedDate:"+DateTime.Now.ToUniversalTime());
                 using var context = new UserDbContext();
-                User u = new User {Id = id};
-                var entity = context.Task.Remove(u);
+                var user = new User {Id = id};
+                var entity = context.Users.Remove(user);
                 entity.State = EntityState.Deleted;
                 context.SaveChanges();
             }
 
-            public void EditStatus(int id, UserWorkStatus uws)
+            public void EditStatus(int id, UserWorkStatus workStatus)
             {
-                Console.WriteLine("changeStatus");
-                User u = new User {Id = id, WorkStatus = uws};
+                Console.WriteLine("changeStatus Id:"+id+" status:"+workStatus);
+                var user = new User {Id = id, WorkStatus = workStatus};
                 using var context = new UserDbContext();
-                var entity = context.Task.Update(u);
+                var entity = context.Users.Update(user);
                 entity.State = EntityState.Modified;
                 context.SaveChanges();
             }
-
-
         }
     }
-
-
-
-
-/*
-public Address Get(int addressId)
-{
-using var context = new AddressDbContext();
-var entity = context.Address.Find(addressId);
-//  Console.WriteLine($"Id:{entity.Id}; Postcode:{entity.Postcode}; City:{entity.City}");
-return entity;
-}*/
-
 

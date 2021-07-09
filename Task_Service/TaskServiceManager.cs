@@ -2,53 +2,47 @@
 using Task_Service.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Task_Service
 {
     public class TaskServiceManager: ITaskManager
     {
-        public void Create(Task t)
+        public void Create(Task task)
         {
-            Console.WriteLine("add:"+t.Id);
             using var context = new TaskDbContext(); 
-            var entity = context.Task.Add(t);
+            var entity = context.Tasks.Add(task);
             entity.State = EntityState.Added;
             context.SaveChanges();
+            Console.WriteLine("add:"+task.Id+" createdDate:"+DateTime.Now.ToUniversalTime());
         }
 
         public void Delete(int id)
         {
-            Console.WriteLine("delete:"+id);
+            Console.WriteLine("delete:"+id+" deletedDate:"+DateTime.Now.ToUniversalTime());
             using var context = new TaskDbContext();
-            Task t = new Task {Id = id};
-            var entity = context.Task.Remove(t);
+            var task = new Task {Id = id};
+            var entity = context.Tasks.Remove(task);
             entity.State = EntityState.Deleted;
-            context.SaveChanges();
+            
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+           
         }
 
-        public void ChangeStatus(int id, TaskStatus ts)
+        public void ChangeStatus(int id, TaskStatus taskStatus)
         {
-            Console.WriteLine("changeStatus:"+id);
-            Task t = new Task {Id = id, Status = ts};
+            Console.WriteLine("changeStatus:"+id+" status"+taskStatus);
+            var task = new Task {Id = id, Status = taskStatus};
             using var context = new TaskDbContext(); 
-            var entity = context.Task.Update(t);
+            var entity = context.Tasks.Update(task);
             entity.State = EntityState.Modified;
             context.SaveChanges();
         }
-
-        
     }
 }
-
-
-
-/*
-public Address Get(int addressId)
-{
-using var context = new AddressDbContext();
-var entity = context.Address.Find(addressId);
-//  Console.WriteLine($"Id:{entity.Id}; Postcode:{entity.Postcode}; City:{entity.City}");
-return entity;
-}*/
-
 

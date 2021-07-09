@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>User_Service</AssemblyName>
+        <RootNamespace>User_Service</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

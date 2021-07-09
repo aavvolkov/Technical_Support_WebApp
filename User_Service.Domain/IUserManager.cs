@@ -4,8 +4,8 @@ namespace User_Service
 {
     public interface IUserManager
     {
-        public void Add(User u);
-        public void EditStatus(int id, UserWorkStatus uws);
+        public void Add(User user);
+        public void EditStatus(int id, UserWorkStatus workStatus);
         public void Delete(int id);
 
       

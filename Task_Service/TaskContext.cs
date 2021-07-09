@@ -5,7 +5,7 @@ namespace Task_Service
 {
     public class TaskDbContext : DbContext
     {
-        public DbSet<Task> Task { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
         public TaskDbContext()
         {
