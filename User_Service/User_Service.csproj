@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>User_Service</AssemblyName>
+        <RootNamespace>User_Service</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\User_Service.Domain\User_Service.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.5.21301.9" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.0-preview.5.21301.9" />
+      <PackageReference Include="SQLite" Version="3.13.0" />
+    </ItemGroup>
+
+</Project>

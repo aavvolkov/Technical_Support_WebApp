@@ -4,17 +4,9 @@ namespace Task_Service
 {
     public interface ITaskManager
     {
-        public void Create(Task t);
-        public void Edit(Task t);
-        public void Delete(Task t);
-        
-        //public TaskStatus ChangeStatus(Task t);
-        //public void ChangeAssignedUser(Task t);
-        
-        
-        
-        
-        
+        public void Create(Task task);
+        public void Delete(int id);
+        public void ChangeStatus(int id, TaskStatus taskStatus);
         
     }
 }

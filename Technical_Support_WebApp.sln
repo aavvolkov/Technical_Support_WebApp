@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Service.Domain", "User
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{46D1A880-5665-4B33-8A4D-59CF9DFA1D44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_Service", "Task_Service\Task_Service.csproj", "{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Service", "User_Service\User_Service.csproj", "{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{46D1A880-5665-4B33-8A4D-59CF9DFA1D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46D1A880-5665-4B33-8A4D-59CF9DFA1D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46D1A880-5665-4B33-8A4D-59CF9DFA1D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5BCB66-1B3B-409D-A8EE-3E0282B2E4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA24DC7D-7DD7-4D6F-8C70-FF288A0134E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

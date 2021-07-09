@@ -1,15 +1,14 @@
-﻿using Task_Service.Models;
-using User_Authorization_Service.Models;
+﻿using User_Service.Models;
 
-namespace User_Authorization_Service
+namespace User_Service
 {
     public interface IUserManager
     {
-        public void Add(User u);
-        public void Edit(User u);
-        public void Delete(User u);
+        public void Add(User user);
+        public void EditStatus(int id, UserWorkStatus workStatus);
+        public void Delete(int id);
 
-        public int CountTasks(string status, Task t);
+      
 
     }
 }
